@@ -54,6 +54,17 @@ public class Bootcamp {
     public void setConteudos(Set<Conteudo> conteudos) {
         this.conteudos = conteudos;
     }
+    
+    public String listarDevsInscritos() {
+    	StringBuilder sb = new StringBuilder("Devs Inscritos:\n");
+    	devsInscritos.forEach(dev -> sb.append(dev.getNome()).append("\n"));
+    	return sb.toString();
+    }
+    
+    public String listarConteudos() {
+    	StringBuilder sb = new StringBuilder("Conteúdos do Bootcamp:\n");
+    	return sb.toString();
+    }
 
     @Override
     public boolean equals(Object o) {
